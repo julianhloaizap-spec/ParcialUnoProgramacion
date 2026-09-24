@@ -13,7 +13,6 @@ public class Desarrollador {
     private Proyecto theProyecto;
 
     //Constructor
-
     public Desarrollador (String idDesarrollador, String equipoTrabajo, String nivelDesarrollador, int cantidadMaxProyectos, double tarifaDesarrollador, String estadoDesarrollador) {
         this.idDesarrollador = idDesarrollador;
         this.equipoTrabajo = equipoTrabajo;
@@ -26,7 +25,6 @@ public class Desarrollador {
     }
 
     //Getters and setters
-
 
     public String getIdDesarrollador() {
         return idDesarrollador;

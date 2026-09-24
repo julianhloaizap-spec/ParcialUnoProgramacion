@@ -32,7 +32,6 @@ public class Proyecto {
 
     //Metodos getter y setter
 
-
     public String getIdProyecto() {
         return idProyecto;
     }
