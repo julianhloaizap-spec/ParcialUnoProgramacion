@@ -100,7 +100,7 @@ public class Empresa {
         this.nitEmpresa = nitEmpresa;
     }
 
-    
+
 
 
 
