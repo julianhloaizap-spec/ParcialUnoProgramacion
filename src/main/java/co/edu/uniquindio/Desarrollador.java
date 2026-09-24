@@ -14,6 +14,19 @@ public class Desarrollador {
 
     //Constructor
 
+    public Desarrollador (String idDesarrollador, String equipoTrabajo, String nivelDesarrollador, int cantidadMaxProyectos, double tarifaDesarrollador, String estadoDesarrollador) {
+        this.idDesarrollador = idDesarrollador;
+        this.equipoTrabajo = equipoTrabajo;
+        this.nivelDesarrollador = nivelDesarrollador;
+        this.cantidadMaxProyectos = cantidadMaxProyectos;
+        this.tarifaDesarrollador = tarifaDesarrollador;
+        this.estadoDesarrollador = estadoDesarrollador;
+        theProyecto = null;
+
+    }
+
+    //Getters and setters
+
 
     public String getIdDesarrollador() {
         return idDesarrollador;
