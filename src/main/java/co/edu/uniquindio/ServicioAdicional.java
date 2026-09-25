@@ -2,52 +2,56 @@ package co.edu.uniquindio;
 
 public class ServicioAdicional {
     // Atributos
-    private String idServicios;
+    private String idServicio;
     private String nombreServicio;
     private String descripcionServicio;
-    private double precioServicio;
-    private String disponibilidadServicio;
-
-    private Proyecto theProyecto;
+    private double precioServicio; // Tipo double
+    private boolean disponibleServicio;
 
     //Constructor
-    public ServicioAdicional (String idServicios, String nombreServicio, String descripcionServicio, double precioServicio, String disponibilidadServicio){
-        this.idServicios = idServicios;
+    public ServicioAdicional(String idServicio, String nombreServicio, String descripcionServicio, double precioServicio, boolean disponibleServicio) {
+        this.idServicio = idServicio;
         this.nombreServicio = nombreServicio;
         this.descripcionServicio = descripcionServicio;
         this.precioServicio = precioServicio;
-        this.disponibilidadServicio = disponibilidadServicio;
+        this.disponibleServicio = disponibleServicio;
     }
     //Getters and Setterers
-    public String getIdServicios(){
-        return idServicios;
+    public String getIdServicio() {
+        return idServicio;
     }
-    public void setIdServicios(String idServicios){
-        this.idServicios = idServicios;
+    public void setIdServicio(String idServicio) {
+        this.idServicio = idServicio;
     }
-    public String getNombreServicio(){
+    public String getNombreServicio() {
         return nombreServicio;
     }
-    public void setNombreServicio(String nombreServicio){
+    public void setNombreServicio(String nombreServicio) {
         this.nombreServicio = nombreServicio;
     }
-    public String getDescripcionServicio (){
+    public String getDescripcionServicio() {
         return descripcionServicio;
     }
-    public void setDescripcionServicio(String descripcionServicio){
+    public void setDescripcionServicio(String descripcionServicio) {
         this.descripcionServicio = descripcionServicio;
     }
-    public double getPrecioServicio(){
+    public double getPrecioServicio() {
         return precioServicio;
     }
-    public void setPrecioServicio(double precioServicio){
+    public void setPrecioServicio(double precioServicio) {
         this.precioServicio = precioServicio;
     }
-    public String getDisponibilidadServicio(){
-        return disponibilidadServicio;
+    public boolean isDisponibleServicio() {
+        return disponibleServicio;
     }
-    public void setDisponibilidadServicio(String disponibilidadServicio){
-        this.disponibilidadServicio = disponibilidadServicio;
+    public void setDisponibleServicio(boolean disponibleServicio) {
+        this.disponibleServicio = disponibleServicio;
     }
 
+    public String mostrarInfo() {
+        return "Cód: " + idServicio +
+                " | Nombre: " + nombreServicio +
+                " | Precio: $" + precioServicio +
+                " | Disponible: " + (disponibleServicio ? "Sí" : "No");
+    }
 }
