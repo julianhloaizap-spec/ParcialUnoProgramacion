@@ -48,7 +48,7 @@ public class Cliente {
         this.paisCliente = paisCliente;
     }
 
-    public String mostrarInfo() {
+    public String mostrarMensaje() {
         return "Doc: " + idCliente +
                 " | Nombre: " + nombreCliente +
                 " | Tel: " + telefonoCliente +

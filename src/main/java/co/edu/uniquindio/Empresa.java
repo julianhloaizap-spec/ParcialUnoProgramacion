@@ -28,7 +28,7 @@ public class Empresa {
         int menuInteractivo = 0;
 
         do {
-            String menu = "=== " + nombreEmpresa + " Menu Principal \n" +
+            String menu =  nombreEmpresa + " Menu Principal \n" +
                     "NIT: " + nitEmpresa + " | Tel: " + telefonoEmpresa + " | Web: " + webEmpresa + "\n\n" +
                     "1. Gestión de Clientes\n" +
                     "2. Gestión de Desarrolladores\n" +
@@ -105,10 +105,10 @@ public class Empresa {
                 String docEdit = JOptionPane.showInputDialog("Ingrese el documento del cliente a modificar:");
                 int idClidenteModificado = buscarClientePorId(docEdit);
                 if (idClidenteModificado != -1) {
-                    clientes[idClidenteModificado].setNombreCompleto(JOptionPane.showInputDialog("Nuevo Nombre:", clientes[idClidenteModificado].getNombreCompleto()));
-                    clientes[idClidenteModificado].setTelefono(Integer.parseInt(JOptionPane.showInputDialog("Nuevo Teléfono:", clientes[idClidenteModificado].getTelefono())));
-                    clientes[idClidenteModificado].setCorreo(JOptionPane.showInputDialog("Nuevo Correo:", clientes[idClidenteModificado].getCorreo()));
-                    clientes[idClidenteModificado].setPais(JOptionPane.showInputDialog("Nuevo País:", clientes[idClidenteModificado].getPais()));
+                    clientes[idClidenteModificado].setNombreCliente(JOptionPane.showInputDialog("Nuevo Nombre:", clientes[idClidenteModificado].getNombreCliente()));
+                    clientes[idClidenteModificado].setTelefonoCliente(Integer.parseInt(JOptionPane.showInputDialog("Nuevo Teléfono:", clientes[idClidenteModificado].getTelefonoCliente())));
+                    clientes[idClidenteModificado].setEmailCliente(JOptionPane.showInputDialog("Nuevo Correo:", clientes[idClidenteModificado].getEmailCliente()));
+                    clientes[idClidenteModificado].setPaisCliente(JOptionPane.showInputDialog("Nuevo País:", clientes[idClidenteModificado].getPaisCliente()));
                     JOptionPane.showMessageDialog(null, "Cliente actualizado.");
                 } else {
                     JOptionPane.showMessageDialog(null, "Cliente no encontrado.");
@@ -134,7 +134,7 @@ public class Empresa {
 
     private static int buscarClientePorId(String docCliente) {
         for (int i = 0; i < cantClientes; i++) {
-            if (clientes[i].getDocumento().equalsIgnoreCase(docCliente)) {
+            if (clientes[i].getIdCliente().equalsIgnoreCase(docCliente)) {
                 return i;
             }
         }
@@ -270,8 +270,8 @@ public class Empresa {
                 String codEdit = JOptionPane.showInputDialog("Ingrese el codigo del servicio a editar:");
                 int posEdit = buscarServicioPorCodigo(codEdit);
                 if (posEdit != -1) {
-                    servicios[posEdit].setNombre(JOptionPane.showInputDialog("Nuevo Nombre:", servicios[posEdit].getNombre()));
-                    servicios[posEdit].setPrecio(Double.parseDouble(JOptionPane.showInputDialog("Nuevo Precio:", servicios[posEdit].getPrecio())));
+                    servicios[posEdit].setNombreServicio(JOptionPane.showInputDialog("Nuevo Nombre:", servicios[posEdit].getNombreServicio()));
+                    servicios[posEdit].setPrecioServicio(Double.parseDouble(JOptionPane.showInputDialog("Nuevo Precio:", servicios[posEdit].getPrecioServicio())));
                     JOptionPane.showMessageDialog(null, "Servicio actualizado.");
                 } else {
                     JOptionPane.showMessageDialog(null, "Servicio no encontrado.");
@@ -297,7 +297,7 @@ public class Empresa {
 
     private static int buscarServicioPorCodigo(String cod) {
         for (int i = 0; i < cantServicios; i++) {
-            if (servicios[i].getCodigo().equalsIgnoreCase(cod)) {
+            if (servicios[i].getIdServicio().equalsIgnoreCase(cod)) {
                 return i;
             }
         }
@@ -376,7 +376,7 @@ public class Empresa {
                     String codS = JOptionPane.showInputDialog("Codigo del servicio adicional:");
                     int posS = buscarServicioPorCodigo(codS);
                     if (posS != -1) {
-                        if (servicios[posS].isDisponible()) {
+                        if (servicios[posS].isDisponibleServicio()) {
                             proyectos[posPS].agregarServicio(servicios[posS]);
                             JOptionPane.showMessageDialog(null, "Servicio agregado. Valor total del proyecto actualizado.");
                         } else {
@@ -453,7 +453,7 @@ public class Empresa {
 
                 // Busqueda del cliente por telefono
                 for (int i = 0; i < cantClientes; i++) {
-                    if (clientes[i].getTelefono() == telBuscado) {
+                    if (clientes[i].getTelefonoCliente() == telBuscado) {
                         posEncontrado = i;
                         break;
                     }
@@ -507,4 +507,4 @@ public class Empresa {
 
 
 
-}
+

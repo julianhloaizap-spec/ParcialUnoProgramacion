@@ -68,7 +68,7 @@ class Proyecto {
         }
         double costoServicios = 0;
         for (int i = 0; i < cantServicios; i++) {
-            costoServicios += servicios[i].getPrecio();
+            costoServicios += servicios[i].getPrecioServicio();
         }
         return costoDevs + costoServicios;
     }
