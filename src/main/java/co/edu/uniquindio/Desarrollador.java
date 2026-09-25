@@ -34,12 +34,28 @@ public class Desarrollador {
         this.idDesarrollador = idDesarrollador;
     }
 
-    public String getEquipoTrabajo() {
-        return equipoTrabajo;
+    public Proyecto getTheProyecto() {
+        return theProyecto;
     }
 
-    public void setEquipoTrabajo(String equipoTrabajo) {
-        this.equipoTrabajo = equipoTrabajo;
+    public void setTheProyecto(Proyecto theProyecto) {
+        this.theProyecto = theProyecto;
+    }
+
+    public String getEstadoDesarrollador() {
+        return estadoDesarrollador;
+    }
+
+    public void setEstadoDesarrollador(String estadoDesarrollador) {
+        this.estadoDesarrollador = estadoDesarrollador;
+    }
+
+    public double getTarifaDesarrollador() {
+        return tarifaDesarrollador;
+    }
+
+    public void setTarifaDesarrollador(double tarifaDesarrollador) {
+        this.tarifaDesarrollador = tarifaDesarrollador;
     }
 
     public String getNivelDesarrollador() {
@@ -58,29 +74,11 @@ public class Desarrollador {
         this.cantidadMaxProyectos = cantidadMaxProyectos;
     }
 
-    public double getTarifaDesarrollador() {
-        return tarifaDesarrollador;
+    public String getEquipoTrabajo() {
+        return equipoTrabajo;
     }
 
-    public void setTarifaDesarrollador(double tarifaDesarrollador) {
-        this.tarifaDesarrollador = tarifaDesarrollador;
+    public void setEquipoTrabajo(String equipoTrabajo) {
+        this.equipoTrabajo = equipoTrabajo;
     }
-
-    public String getEstadoDesarrollador() {
-        return estadoDesarrollador;
-    }
-
-    public void setEstadoDesarrollador(String estadoDesarrollador) {
-        this.estadoDesarrollador = estadoDesarrollador;
-    }
-
-    public Proyecto getTheProyecto() {
-        return theProyecto;
-    }
-
-    public void setTheProyecto(Proyecto theProyecto) {
-        this.theProyecto = theProyecto;
-    }
-}
-
 }

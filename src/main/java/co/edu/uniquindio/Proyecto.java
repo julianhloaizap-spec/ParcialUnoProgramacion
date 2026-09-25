@@ -14,7 +14,7 @@ public class Proyecto {
 
     private Cliente theCliente;
     private Desarrollador [] listDesarrolladores;
-    private ServiciosAdicionales [] listServiciosAdicionales;
+    private ServicioAdicional [] listServiciosAdicionales;
 
     //Constructor
     public Proyecto (String idProyecto, LocalDate fechaSolicitud, LocalDate fechaInicio, LocalDate fechaEntrega, String estadoProyecto, String estadoProyecto, String metodoPago) {
@@ -27,10 +27,11 @@ public class Proyecto {
         this.metodoPago = metodoPago;
         theCliente = null;
         listDesarrolladores = new Desarrollador[10];
-        listServiciosAdicionales = new ServiciosAdicionales[4];
+        listServiciosAdicionales = new ServicioAdicional[4];
     }
 
     //Metodos getter y setter
+
 
     public String getIdProyecto() {
         return idProyecto;
@@ -96,11 +97,11 @@ public class Proyecto {
         this.listDesarrolladores = listDesarrolladores;
     }
 
-    public ServiciosAdicionales[] getListServiciosAdicionales() {
+    public ServicioAdicional[] getListServiciosAdicionales() {
         return listServiciosAdicionales;
     }
 
-    public void setListServiciosAdicionales(ServiciosAdicionales[] listServiciosAdicionales) {
+    public void setListServiciosAdicionales(ServicioAdicional[] listServiciosAdicionales) {
         this.listServiciosAdicionales = listServiciosAdicionales;
     }
 }
