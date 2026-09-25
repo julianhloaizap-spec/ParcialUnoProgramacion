@@ -1,84 +1,36 @@
 package co.edu.uniquindio;
 
-public class Desarrollador {
+class Desarrollador {
+    private String codigo;
+    private String equipo;
+    private String nivel; // Junior, Semisenior, Senior
+    private int maxProyectos; // Tipo int
+    private double tarifaDia; // Tipo double
+    private String estado; // Disponible, Asignado, Ocupado, En capacitacion
 
-    //Atributos
-    private String idDesarrollador;
-    private String equipoTrabajo;
-    private String nivelDesarrollador;
-    private int cantidadMaxProyectos;
-    private double tarifaDesarrollador;
-    private String estadoDesarrollador;
-
-    private Proyecto theProyecto;
-
-    //Constructor
-    public Desarrollador (String idDesarrollador, String equipoTrabajo, String nivelDesarrollador, int cantidadMaxProyectos, double tarifaDesarrollador, String estadoDesarrollador) {
-        this.idDesarrollador = idDesarrollador;
-        this.equipoTrabajo = equipoTrabajo;
-        this.nivelDesarrollador = nivelDesarrollador;
-        this.cantidadMaxProyectos = cantidadMaxProyectos;
-        this.tarifaDesarrollador = tarifaDesarrollador;
-        this.estadoDesarrollador = estadoDesarrollador;
-        theProyecto = null;
-
+    public Desarrollador(String codigo, String equipo, String nivel, int maxProyectos, double tarifaDia, String estado) {
+        this.codigo = codigo;
+        this.equipo = equipo;
+        this.nivel = nivel;
+        this.maxProyectos = maxProyectos;
+        this.tarifaDia = tarifaDia;
+        this.estado = estado;
     }
 
-    //Getters and setters
+    public String getCodigo() { return codigo; }
+    public void setCodigo(String codigo) { this.codigo = codigo; }
+    public String getEquipo() { return equipo; }
+    public void setEquipo(String equipo) { this.equipo = equipo; }
+    public String getNivel() { return nivel; }
+    public void setNivel(String nivel) { this.nivel = nivel; }
+    public int getMaxProyectos() { return maxProyectos; }
+    public void setMaxProyectos(int maxProyectos) { this.maxProyectos = maxProyectos; }
+    public double getTarifaDia() { return tarifaDia; }
+    public void setTarifaDia(double tarifaDia) { this.tarifaDia = tarifaDia; }
+    public String getEstado() { return estado; }
+    public void setEstado(String estado) { this.estado = estado; }
 
-    public String getIdDesarrollador() {
-        return idDesarrollador;
-    }
-
-    public void setIdDesarrollador(String idDesarrollador) {
-        this.idDesarrollador = idDesarrollador;
-    }
-
-    public Proyecto getTheProyecto() {
-        return theProyecto;
-    }
-
-    public void setTheProyecto(Proyecto theProyecto) {
-        this.theProyecto = theProyecto;
-    }
-
-    public String getEstadoDesarrollador() {
-        return estadoDesarrollador;
-    }
-
-    public void setEstadoDesarrollador(String estadoDesarrollador) {
-        this.estadoDesarrollador = estadoDesarrollador;
-    }
-
-    public double getTarifaDesarrollador() {
-        return tarifaDesarrollador;
-    }
-
-    public void setTarifaDesarrollador(double tarifaDesarrollador) {
-        this.tarifaDesarrollador = tarifaDesarrollador;
-    }
-
-    public String getNivelDesarrollador() {
-        return nivelDesarrollador;
-    }
-
-    public void setNivelDesarrollador(String nivelDesarrollador) {
-        this.nivelDesarrollador = nivelDesarrollador;
-    }
-
-    public int getCantidadMaxProyectos() {
-        return cantidadMaxProyectos;
-    }
-
-    public void setCantidadMaxProyectos(int cantidadMaxProyectos) {
-        this.cantidadMaxProyectos = cantidadMaxProyectos;
-    }
-
-    public String getEquipoTrabajo() {
-        return equipoTrabajo;
-    }
-
-    public void setEquipoTrabajo(String equipoTrabajo) {
-        this.equipoTrabajo = equipoTrabajo;
+    public String mostrarInfo() {
+        return "Cód: " + codigo + " | Equipo: " + equipo + " | Nivel: " + nivel + " | Tarifa/Día: $" + tarifaDia + " | Estado: " + estado;
     }
 }
